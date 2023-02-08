@@ -1,4 +1,4 @@
---[[ init.lua ]]
+-- [[ init.lua ]]
 
 -- LEADER
 -- These keybindings need to be defined before the first /
@@ -10,4 +10,13 @@ vim.g.localleader = "\\"
 require('vars')      -- Variables
 require('opts')      -- Options
 require('keys')      -- Keymaps
--- require('plug')      -- Plugins
+require('plug')      -- Plugins
+
+-- PLUGINS
+require('nvim-tree').setup{}
+require('lualine').setup {
+  options = {
+    theme = 'dracula-nvim'
+  }
+}
+require('nvim-autopairs').setup{}
